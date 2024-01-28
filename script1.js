@@ -1,3 +1,4 @@
+// First practice and learning codes 
 alert("Hello World")
 let js = "amazing"
 if (js === "amazing") alert('JavaScript is FUN!')
@@ -50,3 +51,20 @@ console.log(x - 1991 > x - 2018);
 let ac, ad;
 ac = ad = 25 - 10 - 5;
 console.log(ac, ad);
+
+
+// first challenge of Udemy test  
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+let BMIMark, BMIJohn;
+
+BMIMark = massMark / (heightMark * heightMark);
+BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(`Mark's BMI: ${BMIMark}`);
+console.log(`John's BMI: ${BMIJohn}`);
+
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(`Is Mark's BMI higher than John's? ${markHigherBMI}`);

@@ -68,3 +68,58 @@ console.log(`John's BMI: ${BMIJohn}`);
 
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(`Is Mark's BMI higher than John's? ${markHigherBMI}`);
+
+
+// Second practice start 
+
+const firstname = "Samit";
+const job = 'teacher';
+const birthyear = 1991;
+const year = 2037;
+
+const sam = "I'm " + firstname + ', a ' + (year - birthyear) + 'year old ' + job + '!';
+console.log(sam);
+
+const samit = `I'm ${firstname}, a ${year - birthyear} year old ${job}!`;
+console.log(samit);
+
+console.log(`just a regular string.`);
+console.log(`String with \n\ multiple \n\ lines`);
+console.log(`String with
+multiple
+lines`);
+
+const age = 19;
+const isOldEnough = age >= 18;
+
+if (age >= 18) {
+    console.log("Hello true");
+}
+else {
+    console.log("Hello false");
+    const years = 18 - age;
+    console.log(`Hello years ${BMIMark}`);
+}
+
+
+// second code challange 
+
+// Store Mark's and John's mass and height
+const massMarks = 78; // in kg
+const heightMarks = 1.69; // in meters
+
+const massJohns = 92; // in kg
+const heightJohns = 1.95; // in meters
+
+// Calculate BMIs
+const BMIMarks = massMarks / (heightMarks * heightMarks);
+const BMIJohns = massJohns / (heightJohns * heightJohns);
+
+// Compare BMIs and print the result
+if (BMIMarks > BMIJohns) {
+    console.log(`Mark's BMI (${BMIMarks}) is higher than John's (${BMIJohns})!`);
+} else if (BMIJohns > BMIMarks) {
+    console.log(`John's BMI (${BMIJohns}) is higher than Mark's (${BMIMarks})!`);
+} else {
+    console.log("Mark and John have the same BMI!");
+}

@@ -33,3 +33,20 @@ console.log(typeof aa);
 
 let ab;
 console.log(typeof ab);
+
+const x = 2034;
+const y = x - 1000;
+const z = x + 2000;
+console.log(y, z);
+console.log(y + z, y * z, x / y, 2 ** 3);
+
+const fn = "samit";
+const ln = "saha";
+console.log(fn + ' ' + ln);
+
+const isfullage = 14 >= 3;
+console.log(x - 1991 > x - 2018);
+
+let ac, ad;
+ac = ad = 25 - 10 - 5;
+console.log(ac, ad);

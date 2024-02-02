@@ -1,9 +1,10 @@
 // First practice and learning codes 
-alert("Hello World")
-let js = "amazing"
-if (js === "amazing") alert('JavaScript is FUN!')
-js = 'boring'
-if (js === "amazing") alert('JavaScript is FUN!')
+
+// alert("Hello World")
+// let js = "amazing"
+// if (js === "amazing") alert('JavaScript is FUN!')
+// js = 'boring'
+// if (js === "amazing") alert('JavaScript is FUN!')
 console.log(40 + 8 - 10 + 23);
 
 let f = "Samit";
@@ -123,3 +124,118 @@ if (BMIMarks > BMIJohns) {
 } else {
     console.log("Mark and John have the same BMI!");
 }
+
+
+
+const xy = '1999';
+console.log(Number(xy), xy);
+console.log(Number(xy) + 20);
+console.log(Number('Samit'));
+console.log(typeof NaN);
+console.log(String(23), 23);
+console.log('I am ' + 23 + ' yeara old');
+console.log('I am ' + '23' + ' yeara old');
+console.log('23' + '23' - '3');
+console.log('23' / '3');
+console.log('23' * '3');
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
+
+if (23 === 23) {
+    console.log('ok');
+}
+
+const has = true;
+const had = false;
+
+console.log(has && had);
+console.log(has || had);
+console.log(!has);
+const should = has && had;
+if (should) {
+    console.log("haha");
+}
+else {
+    console.log('lol');
+}
+const it = true;
+console.log(has && had && it);
+
+if (has && had && !it) {
+    console.log("haha");
+}
+else {
+    console.log('lol');
+}
+
+
+
+// challenge 3 test code 
+
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+console.log(scoreDolphins);
+console.log(scoreKoalas)
+
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the trophy");
+}
+else if (scoreDolphins == scoreKoalas) {
+    console.log("Both win the trophy");
+}
+else {
+    console.log("Koalas win the trophy");
+}
+
+// next challenge practice
+
+if (1 === "1") {
+    console.log("haha");
+}
+else {
+    console.log('lol');
+}
+
+// switch break 
+
+const day = "W";
+
+switch (day) {
+    case 'M':
+        console.log('1');
+        break;
+
+    case 'T':
+        console.log('2');
+        break;
+
+    case 'W':
+        console.log('3');
+        break;
+
+    case 'S':
+        break;
+    default:
+        console.log('no');
+}
+
+const ax = 'samit';
+console.log(`I'm ${2024 - 1999} years old ${ax}`);
+
+const ag = 23;
+const drink = ag >= 28 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if (ag >= 18) {
+    drink2 = 'wine';
+} else {
+    drink2 = 'wine';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${ag >= 18 ? 'wine' : 'water'}`);

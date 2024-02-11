@@ -135,6 +135,35 @@ else {
 }
 
 
+// challenge 2 
+
+// Function to calculate tip
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+// Test the function with a bill value of 100
+console.log(calcTip(100)); // Output: 15
+
+// Test data
+const bills = [125, 555, 44];
+
+// Calculate tips for each bill
+const tips = bills.map(bill => calcTip(bill));
+//const tips = [ calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]) ];
+console.log(bills, tips); // Output: [18.75, 111, 8.8]
+
+// Calculate total values
+const totals = bills.map((bill, index) => bill + tips[index]);
+// const totals = [ bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ];
+console.log(bills, tips, totals); // Output: [143.75, 666, 52.8]
+
+
+// practice part start - Objects
+
+
+
+
 
 
 

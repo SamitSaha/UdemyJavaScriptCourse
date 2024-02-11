@@ -111,4 +111,42 @@ console.log(ag1, ag2, ag3);
 const ages = [call(year[0]), call(year[1]), call(year[year.length - 1])];
 console.log(ages);
 
+friend.pop();
+const pop = friend.pop();
+console.log(pop);
+console.log(friend);
+
+friend.shift();
+console.log(friend);
+
+console.log(friend.indexOf('Steven'));
+console.log(friend.indexOf('obbb'));
+
+friend.push(23);
+console.log(friend.includes('Steven'));
+console.log(friend.includes('Steven'));
+console.log(friend.includes(23));
+
+if (friend.includes('Peter')) {
+    console.log('hiiii');
+}
+else {
+    console.log('bye');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

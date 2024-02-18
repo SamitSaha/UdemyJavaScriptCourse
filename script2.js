@@ -162,6 +162,61 @@ console.log(bills, tips, totals); // Output: [143.75, 666, 52.8]
 // practice part start - Objects
 
 
+const s = {
+    firstname: 'Samit',
+    lastname: 'Saha',
+    age: 2024 - 1999,
+    job: 'bekar',
+    friend: ['deb', 'hir', 'hos']
+};
+
+console.log(s);
+console.log(s.lastname);
+console.log(s.firstname);
+
+const namekey = 'name';
+console.log(s['first' + namekey]);
+console.log(s['last' + namekey]);
+
+const interest = prompt('what do you want to know about jonas? choose between firstname, lastname, age, job and friends');
+
+if (s[interest]) {
+    console.log(s[interest]);
+}
+else {
+    console.log('Wrong request!send again!');
+}
+
+s.location = 'narayanganj';
+s['gamil'] = 'samitsaha99@gmail.com';
+console.log(s);
+
+// challange -> s has 3 friends and his best friend is called deb
+
+console.log(`${s.firstname} ${s.lastname} has ${s.friend.length} friends, and his best friend is called ${s.friend[0]}. `);
+
+const ss = {
+    firstname: 'Samit',
+    lastname: 'Saha',
+    age: 2024 - 1999,
+    job: 'bekar',
+    friend: ['deb', 'hir', 'hos'],
+    hasDriverLicense: true,
+
+    calAge: function (birthyear) {
+        return 2024 - birthyear;
+    }
+};
+
+
+
+
+
+
+
+
+
+
 
 
 

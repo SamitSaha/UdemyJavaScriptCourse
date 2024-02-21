@@ -196,17 +196,67 @@ console.log(s);
 console.log(`${s.firstname} ${s.lastname} has ${s.friend.length} friends, and his best friend is called ${s.friend[0]}. `);
 
 const ss = {
+    statue: '10600',
     firstname: 'Samit',
     lastname: 'Saha',
-    age: 2024 - 1999,
+    birthyear: 1999,
     job: 'bekar',
     friend: ['deb', 'hir', 'hos'],
     hasDriverLicense: true,
 
-    calAge: function (birthyear) {
-        return 2024 - birthyear;
+    calAge: function () {
+        this.age = 2024 - this.birthyear
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this}`
     }
 };
+
+console.log(ss.calAge());
+
+
+// challange 3 
+
+// Define Mark and John objects
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    // Method to calculate BMI
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    // Method to calculate BMI
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+// Calculate BMI for both Mark and John
+mark.calcBMI();
+john.calcBMI();
+
+// Determine and log who has the higher BMI
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`);
+} else {
+    console.log(`Both ${mark.fullName} and ${john.fullName} have the same BMI (${mark.bmi})!`);
+}
+
+
+// practice 
 
 
 

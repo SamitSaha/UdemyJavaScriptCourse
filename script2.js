@@ -256,7 +256,40 @@ if (mark.bmi > john.bmi) {
 }
 
 
-// practice 
+// challenge 4 
+
+// Function to calculate tip
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+// Test data
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+// Calculate tips and totals
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(bills[i] + tip);
+}
+
+console.log("Tips:", tips);
+console.log("Totals:", totals);
+
+// Function to calculate average
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+// Calculate average of totals
+console.log("Average of totals:", calcAverage(totals));
+
 
 
 

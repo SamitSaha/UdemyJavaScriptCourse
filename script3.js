@@ -33,3 +33,19 @@ const caall = function (t1, t2) {
 
 const a = caall([3, 4, 5], [9, 7, 1]);
 console.log(a);
+
+// another
+
+const d1 = [17, 21, 23];
+const d2 = [12, 5, -5, 0, 4];
+
+console.log(`... ${d1[0]}C ... ${d1[1]}C ... ${d1[2]}C ...`);
+
+const print = function (arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}C in ${i + 1} days ... `;
+  }
+  console.log('... ' + str);
+};
+print(d1);

@@ -264,19 +264,19 @@ function calcTip(bill) {
 }
 
 // Test data
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+const Bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const Tips = [];
+const Totals = [];
 
 // Calculate tips and totals
 for (let i = 0; i < bills.length; i++) {
     const tip = calcTip(bills[i]);
-    tips.push(tip);
-    totals.push(bills[i] + tip);
+    Tips.push(tip);
+    totals.push(Bills[i] + ip);
 }
 
-console.log("Tips:", tips);
-console.log("Totals:", totals);
+console.log("Tips:", Tips);
+console.log("Totals:", Totals);
 
 // Function to calculate average
 function calcAverage(arr) {
@@ -288,7 +288,7 @@ function calcAverage(arr) {
 }
 
 // Calculate average of totals
-console.log("Average of totals:", calcAverage(totals));
+console.log("Average of totals:", calcAverage(Totals));
 
 
 

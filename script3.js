@@ -81,7 +81,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'WOW! Correct Number.';
     document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('body').style.width = '30rem';
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Too High';
@@ -102,3 +102,5 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
+document.querySelector('.again').addEventListener('click', function () {});

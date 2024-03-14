@@ -1,0 +1,11 @@
+js is a 
+
+high-level,
+mulit-paradigm, => procedural programming, oop, functional programming (FP). => imperative & declarative 
+interpreted or just in time complied, 
+dynamic,
+single threaded, 
+garbage-collected -> programming language
+first class functions  
+non blocking event loop
+concurrency model 

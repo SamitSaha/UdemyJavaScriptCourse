@@ -17,3 +17,37 @@ just in time (Jit) compilation -> entire code is converted into machine code at 
 
 JS ENGINE => 
 
+Scoping and scope in js => 
+
+    scope is the place in our code where variables are declared.
+    variables are the same thing is true for functions. functions are the values which stores into variables.
+
+1. Scoping -> how our programns variables are organized and accessed. - "where do variables live or where can we access an certain variables and where not ?" 
+2. lexial scoping -> the way variables are organized and accessed is entirely controlled bu the placement of function and of blocks in the programns code.
+3. scope -> space or environment in which a certain cariable is declared (variable enviroment in case of functions). there is global scope, function scope, an block scope. 
+4. Scope of a variable -> the entire region of our code, where a certain variable can be accessed.
+5. There are three types of SCOPE in JS. 
+ a. global scope. -> top level code. vari declared in global scope. 
+ b. function scope. -> function codes are created inside function scope. also called local scope. 
+ c. block scope (ES6). -> variables are only accessible only inside block. it is applied to let and const variables. functions are also block scope.
+
+Scope Chain => 
+    const name = 'Samit';
+    function first(){
+        if ( age >= 30){
+            const decade = 3 ; 
+            var millenial = true ;
+        }
+        function second (){
+            const job = 'teacher' ;
+            console.log(`${name} is a ${age} old ${job}`);
+        }
+        second();
+    }
+    first();
+
+/////////////////////////////////////////////////////////
+
+Hoisting in Javascript => 
+makes some types of variables accesible/ usable in the code before they are actually declared. "variables lifted to the top of their scope."
+before exeution code is scanner for variable declarations, and for each variables, a new property in created in the variable enviroment object. 

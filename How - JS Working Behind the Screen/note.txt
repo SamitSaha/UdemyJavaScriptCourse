@@ -7,5 +7,13 @@ dynamic,
 single threaded, 
 garbage-collected -> programming language
 first class functions  
-non blocking event loop
-concurrency model 
+non blocking event loop -> takes long running tasks and executes them in the background and puts them back in the main thread once they are finished. 
+concurrency model -> js runs in one single thread so it can only do one thing at a time.
+long running task -> it would block the songle thread. wan want non-blocking behavior. 
+
+compilation -> entire code is converted into machine code at once and written to a binary file that can be executed by a computer.  (execution can happen after compliation.)
+interpretation -> interpreter runs through the source code and excutes it line by line.  (code still need to be converted to Machine code.)
+just in time (Jit) compilation -> entire code is converted into machine code at once and the execute immediately. (execution happen immediately.)
+
+JS ENGINE => 
+

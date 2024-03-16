@@ -42,3 +42,35 @@ calage(1999);
 
 // console.log(age); // we cannot access this because this in global function or variable or any other scope.
 // printage();
+
+// the output is undefined beacuse the variable initialize after the printing code. this is -> "TDZ" !!!!!!!!!!!!!!
+// console.log(me);
+// console.log(job);
+// console.log(year);
+
+// vaiable declaration
+var me = 'Samit';
+let job = 'student';
+const year = 1991;
+
+// Function declaration
+
+// console.log(addDeclaration(2 + 5)); //  print the value 2+5 = 7.
+// console.log(addExpression(2 + 5)); // cannot print this funtion because the const variable is defined after the print code .
+// console.log(addArrow(2 + 5)); // cannot print this funtion because the const & var variable is defined after the print code .
+
+function addDeclaration(a, b) {
+  // frictional function
+  return a + b;
+}
+const addExpression = function (a, b) {
+  return a + b;
+};
+const addArrow = (a, b) => a + b;
+
+// Example
+if (!num) deletes();
+var num = 10;
+function deletes() {
+  console.log('deletesd');
+}

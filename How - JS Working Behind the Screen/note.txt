@@ -58,3 +58,7 @@ Temporal Dead Zone - TDZ for job variable.
 
 The this keyword =>
 created for every execution context . take the value of (points to ) the "owner" of the function in which this keyword used. 
+ method -> this = <object that is calling the method>
+ simple function call -> this = undefined
+ arrow function -> this = <this of surronding function (lexical this)>
+ event listener -> this = <DOM element that the handler is attached to>

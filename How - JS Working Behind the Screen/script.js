@@ -74,3 +74,39 @@ var num = 10;
 function deletes() {
   console.log('deletesd');
 }
+
+// // // The this keyword
+
+console.log('The this keyword!!!!!!!!!!!!!!! ');
+//console.log(this); //global scope
+
+const callage = function (birthyear) {
+  console.log(2024 - birthyear);
+  //console.log(this); //global scope
+};
+callage(1999);
+
+const callageArrow = birthyear => {
+  console.log(2024 - birthyear);
+  //console.log(this); //global scope
+};
+callageArrow(1980);
+
+const samit = {
+  firstname: 'Samit',
+  year: 1999,
+  calAge: function () {
+    console.log(this); // disk keyword always points to the object that is calling the method. it is dynamic, not static, it depends on how the function is called.
+    console.log(2024 - this.year);
+  },
+};
+samit.calAge();
+
+const m = {
+  year: 1998,
+};
+m.calAge = samit.calAge; // calAge() method borrowed from samit to m.
+m.calAge();
+
+const a = samit.calAge; // put the samit calAge function into the "a" const variable.
+// a(); // undefined

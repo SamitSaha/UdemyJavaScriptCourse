@@ -62,3 +62,5 @@ created for every execution context . take the value of (points to ) the "owner"
  simple function call -> this = undefined
  arrow function -> this = <this of surronding function (lexical this)>
  event listener -> this = <DOM element that the handler is attached to>
+
+ // fundamental concept of JS is PROTOTYPE INHERITANCE, EVENT LOOP,  

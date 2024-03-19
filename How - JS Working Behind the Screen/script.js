@@ -110,3 +110,37 @@ m.calAge();
 
 const a = samit.calAge; // put the samit calAge function into the "a" const variable.
 // a(); // undefined
+
+// Primitives VS Objects / Reference Types
+let aa = 30;
+let oa = aa;
+aa = 31;
+console.log(aa);
+console.log(oa);
+
+const mee = {
+  name: 'SAmit',
+  aa: 30,
+};
+
+const friend = mee;
+friend.aa = 27;
+console.log('Friend:', friend);
+console.log('Me:', mee); // for the primitive value the const is acutally const variable. but for the reference values const can be changed beacuse of the heap location and how that the variable is called.
+
+const sam = {
+  firstname: 'Sam',
+  lastname: 'Saha',
+  aa: 25,
+  family: ['x', 'y'],
+};
+
+const samcopy = Object.assign({}, sam);
+samcopy.lastname = 'Sssss';
+
+samcopy.family.push('A');
+samcopy.family.push('b');
+
+console.log('Before: ', sam);
+console.log('After: ', samcopy);
+// creating deep clone -> use exxternal library

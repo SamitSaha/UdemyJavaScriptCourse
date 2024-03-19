@@ -6,6 +6,22 @@ const resturant = {
   categories: ['Bengali', 'Moglai', 'Biriyani', 'Drinks'],
   starterMenu: ['a', 'b', 'c', 'd', 'e'],
   mainMenue: ['P', 'Pa', 'Ri'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenue[mainIndex]];
   },
@@ -45,3 +61,34 @@ console.log(aa, b, [c, d]);
 
 const [p = 1, q = 1, r = 1] = [8, 9]; // default values
 console.log(p, q, r);
+
+//Practice.
+
+//1.1
+//Destructure the books array into two variables called firstBook and secondBook.
+const [firstBook, secondBook] = books;
+
+//1.2
+//Destructure the books array into a variable called thirdBook. You must skip the first two books.
+const [, , thirdBook] = books;
+
+// 1.3
+// Below is the nested ratings array that contains two other arrays. Destructure the nested ratings arrays into two variables called rating and ratingsCount. In the result of your destructuring, the ratings variable should store a number 4.19, and the ratingsCount variable should store a number 144584.
+const ratings = [
+  ['rating', 4.19],
+  ['ratingsCount', 144584],
+];
+const [[, rating], [, ratingsCount]] = ratings;
+
+// 1.4
+// Below is the ratingStars array. Destructure it into three variables called fiveStarRatings, oneStarRatings and threeStarRatings. Assign the threeStarRatings variable with a default value of 0.
+const ratingStars = [63405, 1808];
+const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+
+// /////////////////////  Destruction Objects   /////////////////////
+const {namee, openingHours, categories} =resturant;
+console.log(namee, openingHours, categories);
+
+const {
+    
+}

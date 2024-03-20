@@ -21,9 +21,18 @@ const resturant = {
       close: 24,
     },
   },
-
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenue[mainIndex]];
+  },
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 1,
+    time = '20.00',
+    address,
+  }) {
+    console.log(
+      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenue[mainIndex]} will be deliverd to ${address} at ${time}.`
+    );
   },
 };
 
@@ -66,29 +75,58 @@ console.log(p, q, r);
 
 //1.1
 //Destructure the books array into two variables called firstBook and secondBook.
-const [firstBook, secondBook] = books;
+// const [firstBook, secondBook] = books;
 
 //1.2
 //Destructure the books array into a variable called thirdBook. You must skip the first two books.
-const [, , thirdBook] = books;
+// const [, , thirdBook] = books;
 
 // 1.3
 // Below is the nested ratings array that contains two other arrays. Destructure the nested ratings arrays into two variables called rating and ratingsCount. In the result of your destructuring, the ratings variable should store a number 4.19, and the ratingsCount variable should store a number 144584.
-const ratings = [
-  ['rating', 4.19],
-  ['ratingsCount', 144584],
-];
-const [[, rating], [, ratingsCount]] = ratings;
+// const ratings = [
+//   ['rating', 4.19],
+//   ['ratingsCount', 144584],
+// ];
+// const [[, rating], [, ratingsCount]] = ratings;
 
 // 1.4
 // Below is the ratingStars array. Destructure it into three variables called fiveStarRatings, oneStarRatings and threeStarRatings. Assign the threeStarRatings variable with a default value of 0.
-const ratingStars = [63405, 1808];
-const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+// const ratingStars = [63405, 1808];
+// const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 
 // /////////////////////  Destruction Objects   /////////////////////
-const {namee, openingHours, categories} =resturant;
-console.log(namee, openingHours, categories);
+const { name, openingHours, categories } = resturant;
+console.log(name, openingHours, categories);
 
 const {
-    
-}
+  name: resturantName,
+  openingHours: hours,
+  categories: tags,
+} = resturant;
+console.log(resturantName, hours, tags);
+
+const { menu = [], starterMenu: starters = [] } = resturant; // default values
+console.log(menu, starters);
+
+let xx = 111; // Muatting variables
+let yy = 999;
+const obj = { xx: 23, yy: 7, zz: 14 };
+({ xx, yy } = obj);
+console.log(xx, yy);
+
+// Nested Objects
+const {
+  fri: { open: oo, close: cc },
+} = openingHours;
+console.log(oo, cc);
+
+resturant.orderDelivery({
+  time: '22:30',
+  address: 'xyz',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+resturant.orderDelivery({
+  address: 'xyz',
+  starterIndex: 3,
+});

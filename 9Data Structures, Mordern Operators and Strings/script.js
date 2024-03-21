@@ -34,6 +34,10 @@ const resturant = {
       `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenue[mainIndex]} will be deliverd to ${address} at ${time}.`
     );
   },
+
+  orderPasta: function (i1, i2, i3) {
+    console.log(`Here is your delicious pasta with ${i1}, ${i2}, ${i3}`);
+  },
 };
 
 const arr = [2, 3, 4];
@@ -130,3 +134,59 @@ resturant.orderDelivery({
   address: 'xyz',
   starterIndex: 3,
 });
+
+// //////////////////// The Spread Operators ///////////////
+const ar = [7, 8, 9, ...[3, 4]]; // spread, because of RIGHT side of =
+
+const [s, f, ...others] = [1, 2, 3, 4, 5, 6]; // rest, because on LEFT side of =
+console.log(s, f, others);
+const badNewAr = [1, 2, ar[0], ar[1], ar[2]];
+console.log(badNewAr); // same output
+
+const newAr = [1, 2, ...ar];
+console.log(newAr); // same output
+console.log(...newAr); // get the value individually. not as array
+
+const newMenu = [...resturant.mainMenue, 'LOL'];
+console.log(newMenu);
+console.log(...newMenu);
+
+// copy array
+const mainMenuCopy = [...resturant.mainMenue];
+
+// join 2 array
+const menuee = [...resturant.mainMenue, ...resturant.starterMenu];
+console.log(menuee);
+
+// Iterables: arrays, strings, maps, sets, not objects.
+const str = 'Jonas';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+
+// Real world example
+const ing = [
+  prompt("Let's make pasta"),
+  prompt("Let's make pasta"),
+  prompt("Let's make pasta"),
+];
+console.log(ing);
+resturant.orderPasta(ing[0], ing[1], ing[2]);
+resturant.orderPasta(...ing);
+
+// Objects
+const newRes = { ...resturant, founding: 2024, founder: 'Samit' };
+console.log(newRes);
+const resturantCopy = { ...resturant };
+resturantCopy.name = 'Sugondha';
+console.log(resturant.name);
+console.log(resturantCopy.name);
+
+const [P, Pa, ...otherfood] = [
+  ...resturant.mainMenue,
+  ...resturant.starterMenu,
+];
+console.log(P, Pa, otherfood);
+
+//objects
+const {} = 

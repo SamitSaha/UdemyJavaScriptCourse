@@ -38,6 +38,10 @@ const resturant = {
   orderPasta: function (i1, i2, i3) {
     console.log(`Here is your delicious pasta with ${i1}, ${i2}, ${i3}`);
   },
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients);
+    console.log(otherIngredients);
+  },
 };
 
 const arr = [2, 3, 4];
@@ -136,6 +140,8 @@ resturant.orderDelivery({
 });
 
 // //////////////////// The Spread Operators ///////////////
+
+// spread operators are used where we would otherewise write values, separated by comma, the rest pattern is basically used where we would otherwise write variable names separated by commas.
 const ar = [7, 8, 9, ...[3, 4]]; // spread, because of RIGHT side of =
 
 const [s, f, ...others] = [1, 2, 3, 4, 5, 6]; // rest, because on LEFT side of =
@@ -164,15 +170,15 @@ const letters = [...str, ' ', 'S.'];
 console.log(letters);
 console.log(...str);
 
-// Real world example
-const ing = [
-  prompt("Let's make pasta"),
-  prompt("Let's make pasta"),
-  prompt("Let's make pasta"),
-];
-console.log(ing);
-resturant.orderPasta(ing[0], ing[1], ing[2]);
-resturant.orderPasta(...ing);
+// Real world example - using prompt
+// const ing = [
+//   prompt("Let's make pasta"),
+//   prompt("Let's make pasta"),
+//   prompt("Let's make pasta"),
+// ];
+// console.log(ing);
+// resturant.orderPasta(ing[0], ing[1], ing[2]);
+// resturant.orderPasta(...ing);
 
 // Objects
 const newRes = { ...resturant, founding: 2024, founder: 'Samit' };
@@ -189,4 +195,50 @@ const [P, Pa, ...otherfood] = [
 console.log(P, Pa, otherfood);
 
 //objects
-const {} = 
+const { sat, ...weekdays } = resturant.openingHours;
+console.log(weekdays);
+
+// Functions -> rest parameters. rest syntax.
+const add = function (...numbers) {
+  console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+    console.log(sum);
+  }
+};
+add(2, 3);
+add(3, 4, 5, 7, 6);
+
+const xq = [23, 4, 5];
+add(...xq);
+
+resturant.orderPizza('mashroom', 'onion', 'olives', 'spices');
+resturant.orderPizza('mushrooms');
+
+//  ////////////// Short Circuting (&& and ||)
+console.log('----OR----');
+console.log(3 || 'Samit'); // use any data type and return any data type and something called short-circuiting.
+console.log('' || 'Samit');
+console.log(true || 0);
+console.log(undefined || null);
+
+resturant.numGuests = 0;
+const g1 = resturant.numGuests ? resturant.numGuests : 10;
+console.log(g1);
+
+const g2 = resturant.numGuests || 10;
+console.log(g2);
+
+console.log('----AND----');
+
+console.log(0 && 'Samit');
+console.log(7 && 'Samit');
+
+// practival example
+if (resturant.orderPizza) {
+  resturant.orderPizza('LOL', 'LALA');
+}
+
+// ///////////  the nullish coalescing operator ////////////////
+console.log('the nullish coalescing operator');

@@ -10,7 +10,7 @@ const openingHours = {
     open: 11,
     close: 23,
   },
-  [weekdays[0]]: {
+  [weekdays[2]]: {
     open: 0,
     close: 24,
   },
@@ -289,3 +289,18 @@ for (const item of menuee.entries()) console.log(`${item[0] + 1}: ${item[1]}`);
 for (const [i, el] of menuee.entries()) console.log(`${i + 1}: ${el}`);
 console.log([...menuee.entries()]);
 console.log(menuee);
+
+// //////// Optional Chainning ////////
+console.log('//////// Optional Chainning ////////');
+
+if (resturant.openingHours && resturant.openingHours.mon)
+  console.log(resturant.openingHours.mon.open);
+console.log(resturant.openingHours.mon?.open);
+console.log(resturant.openingHours?.mon?.open);
+
+const days = ['sat', 'sun', 'mon', 'tues', 'wed', 'thu', 'fri'];
+for (const day of days) {
+  console.log(day);
+  const open = resturant.openingHours[day]?.open;
+  console.log(`On ${day} we open at ${open}`);
+}

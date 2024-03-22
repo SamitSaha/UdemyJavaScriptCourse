@@ -280,3 +280,8 @@ rest1.owner &&= '<ANONYMOUS>';
 rest2.owner &&= '<ANONYMOUS>';
 console.log(rest1);
 console.log(rest2);
+
+// //////// Looping Arrays: The for-of Loop////////
+for (const item of menuee) console.log(item);
+for (const item of menuee.entries()) console.log(item);
+console.log([...menuee.entries()]);

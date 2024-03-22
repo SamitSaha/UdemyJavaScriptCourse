@@ -304,3 +304,24 @@ for (const day of days) {
   const open = resturant.openingHours[day]?.open;
   console.log(`On ${day} we open at ${open}`);
 }
+// property names
+console.log('/////// property names ////////');
+const po = Object.keys(openingHours);
+console.log(po);
+
+let o = `We are open on ${po.length} days: `;
+for (const day of po) o += `${day}, `;
+console.log(o);
+
+// property values
+console.log('/////// property values ////////');
+const val = Object.values(openingHours);
+console.log(val);
+
+// Entire objects
+console.log('/////// Entire objects ////////');
+const en = Object.entries(openingHours);
+console.log(en);
+
+console.log('/////// Entire objects ////////');
+for (const [x, { y, z }] of en) console.log(`${x},${y},${z}`);

@@ -1,5 +1,21 @@
 'use strict';
 
+const weekdays = ['sat', 'sun', 'mon', 'tues', 'wed', 'thu', 'fri'];
+const openingHours = {
+  [weekdays[5]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[6]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[0]]: {
+    open: 0,
+    close: 24,
+  },
+};
+
 const resturant = {
   name: 'Ananda Resturant',
   location: 'Narayanganj, Dhaka',
@@ -7,20 +23,6 @@ const resturant = {
   starterMenu: ['a', 'b', 'c', 'd', 'e'],
   mainMenue: ['P', 'Pa', 'Ri'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenue[mainIndex]];
   },
@@ -34,7 +36,7 @@ const resturant = {
       `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenue[mainIndex]} will be deliverd to ${address} at ${time}.`
     );
   },
-
+  openingHours, // ES6 enhanced object literals
   orderPasta: function (i1, i2, i3) {
     console.log(`Here is your delicious pasta with ${i1}, ${i2}, ${i3}`);
   },
@@ -103,8 +105,8 @@ console.log(p, q, r);
 // const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 
 // /////////////////////  Destruction Objects   /////////////////////
-const { name, openingHours, categories } = resturant;
-console.log(name, openingHours, categories);
+const { name, openingHourss, categories } = resturant;
+console.log(name, openingHourss, categories);
 
 const {
   name: resturantName,
@@ -195,8 +197,8 @@ const [P, Pa, ...otherfood] = [
 console.log(P, Pa, otherfood);
 
 //objects
-const { sat, ...weekdays } = resturant.openingHours;
-console.log(weekdays);
+const { sat, ...weekdayss } = resturant.openingHours;
+console.log(weekdayss);
 
 // Functions -> rest parameters. rest syntax.
 const add = function (...numbers) {
@@ -283,5 +285,7 @@ console.log(rest2);
 
 // //////// Looping Arrays: The for-of Loop////////
 for (const item of menuee) console.log(item);
-for (const item of menuee.entries()) console.log(item);
+for (const item of menuee.entries()) console.log(`${item[0] + 1}: ${item[1]}`);
+for (const [i, el] of menuee.entries()) console.log(`${i + 1}: ${el}`);
 console.log([...menuee.entries()]);
+console.log(menuee);

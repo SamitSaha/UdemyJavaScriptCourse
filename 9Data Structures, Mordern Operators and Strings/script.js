@@ -323,5 +323,44 @@ console.log('/////// Entire objects ////////');
 const en = Object.entries(openingHours);
 console.log(en);
 
-console.log('/////// Entire objects ////////');
+console.log('/////// Entire objects  ////////');
 for (const [x, { y, z }] of en) console.log(`${x},${y},${z}`);
+
+// //////// SETS ////////
+// //////// SETS ////////
+// //////// SETS ////////
+console.log('//////// SETS ////////');
+
+const orederSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pakora',
+  'Risotto',
+  'Pum',
+  'Pudina',
+]);
+console.log(orederSet);
+console.log(new Set('SAMIT'));
+console.log(orederSet.size);
+console.log(orederSet.has('Pizza'));
+console.log(orederSet.has('Pum'));
+orederSet.add('Biriyani');
+orederSet.add('Meat');
+orederSet.delete('Pum');
+orederSet.add('Pummm');
+//orederSet.clear();
+console.log(orederSet);
+
+for (const os of orederSet) console.log(os);
+const staff = ['wq', 'we', 'wr', 'ws', 'wa', 'ws'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log(new Set(['w', 'ws', 'wa', 'wz', 'wc', 'we']).size);
+console.log(new Set('Samit').size);
+
+const rest = new Map();
+rest.set('name', 'Ananda Resturant');
+rest.set(1, 'sugondha');
+rest.set(2, 'Monir');
+console.log(rest.set(3, 'SUmaiya'));

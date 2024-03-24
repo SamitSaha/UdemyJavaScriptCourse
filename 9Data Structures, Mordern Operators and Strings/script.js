@@ -364,3 +364,26 @@ rest.set('name', 'Ananda Resturant');
 rest.set(1, 'sugondha');
 rest.set(2, 'Monir');
 console.log(rest.set(3, 'SUmaiya'));
+
+rest
+  .set('categories', ['wq', 'we', 'wr', 'ws', 'wa', 'ws'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open')
+  .set(false, 'We are closed');
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+
+const arrr = [1, 2];
+rest.set(arrr, 'Test');
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
+console.log(rest.size);
+console.log(rest.get(arrr));

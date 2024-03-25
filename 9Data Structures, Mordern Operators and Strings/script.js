@@ -406,10 +406,65 @@ console.log(question.get('question'));
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
-const answer = Number(prompt('Your Answer'));
+//const answer = Number(prompt('Your Answer'));
+const answer = 3;
 console.log(answer);
 console.log(question.get(question.get('correct') === answer));
 console.log([...question]);
 console.log(question.entries());
 console.log([...question.keys()]);
 console.log([...question.values()]);
+
+const airline = 'Tap Air Portugal eeeee';
+const plane = 'Abcde';
+
+console.log(plane[0]);
+console.log(plane[1]);
+
+console.log(airline.length);
+console.log('B23de'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.indexOf('r'));
+console.log(airline.indexOf('portugal'));
+console.log(airline.slice(4));
+console.log(airline.slice(0, 7));
+console.log(airline.slice(1, -1));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ' + 1)));
+
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('Middle');
+  else console.log('Lucky');
+};
+checkMiddleSeat('11C');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+console.log(new String('SAMIT'));
+console.log(typeof new String('Samit'));
+console.log(typeof new String('Samit').slice(1));
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+const passenger = 'Samit';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toLowerCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+const email = 'samitsaha99@gmail.com';
+const loginEmail = 'SamitSaha@gmail.com \n';
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+const priceGB = '288,97$';
+const priceUS = priceGB.replace('$', '$').replace(',', '.');
+console.log(priceUS);

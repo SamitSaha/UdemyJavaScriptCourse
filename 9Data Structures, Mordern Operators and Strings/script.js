@@ -479,5 +479,18 @@ const planee = 'A23o0ne';
 console.log(planee.includes('wed'));
 console.log(planee.includes('A23'));
 
-if (plane.startsWith('Airbus')) {
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW airbuds family');
 }
+
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not alllowed on board');
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+checkBaggage('I have a laptop, some Food and a pocket knife');
+checkBaggage('Socks and Camera');
+checkBaggage('Got some snackes and a gun for protection');

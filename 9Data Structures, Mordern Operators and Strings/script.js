@@ -468,3 +468,16 @@ console.log(email === normalizedEmail);
 const priceGB = '288,97$';
 const priceUS = priceGB.replace('$', '$').replace(',', '.');
 console.log(priceUS);
+
+const announcement =
+  'All passengers come to barding door 23. Boarding door 23!';
+console.log(announcement.replace('door', 'gate'));
+//console.log(announcement.replaceAll('door', 'gate'));
+console.log(announcement.replace(/door/g, 'gate'));
+
+const planee = 'A23o0ne';
+console.log(planee.includes('wed'));
+console.log(planee.includes('A23'));
+
+if (plane.startsWith('Airbus')) {
+}
